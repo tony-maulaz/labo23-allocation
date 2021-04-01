@@ -1,0 +1,11 @@
+# Critere
+- Ne pas oublier `free`
+- Gerer si multiple appelle de `liberer`
+- Gestion saisie
+- Débordement du tableau
+- Affichage du nombre de place vide
+- Prendre en compte pour la moyenne que le nombre de valeur
+- Afficher que le nombre de valeur
+- Multiple appelle de l'allocation
+- Valeur négative en saise pour la taille
+- Controle du pointeur après l'allocation
