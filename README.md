@@ -16,19 +16,17 @@ typedef struct
 } Mesures;
 ```
 
-Ce type de données permet de mémoriser des valeurs mesurées dans un tableau
-alloué dynamiquement, pointé par le champ `tableau`. 
+Ce type de données permet de mémoriser des valeurs mesurées dans un tableau alloué dynamiquement, pointé par le champ `tableau`. 
 
 `taille` 
-: Mémorise le nombre de valeurs disponibles dans le tableau alloué
-dynamiquement.
+: Mémorise le nombre de valeurs disponibles dans le tableau alloué dynamiquement.
 
 `nbrMesure`
 : Le nombre de mesure dans le tableau.
 
 On vous demande d’écrire les fonctions suivantes :
 
-#### Saisir
+### Saisir
 ```C
 // Saisie de la taille du tableau et allocation de mémoire.
 void saisir(Mesures* mesures);
@@ -36,15 +34,15 @@ void saisir(Mesures* mesures);
 Cette fonction doit
 - Demander à l'utilisateur de saisir la taille du tableau de mesure
 - Allouer le tableau
-- Si un tableau est déjà alloué, il faut informer l'utilisateur
+- Si un tableau est déjà alloué, il faut informer l'utilisateur que cela n'est pas possible.
 
-#### Initialiser
+### Initialiser
 ```C
-// Mise à zéro des champs de la structure
+// Mise à zéro des champs de la structure y compris le tableau de mesures
 void initialiser(Mesures* mesures);
 ```
 
-#### Ajout
+### Ajouter
 ```C
 // Ajout d'une mesure dans le tableau
 void ajout(Mesures* mesures);
@@ -55,14 +53,14 @@ Cette fonction permet d'ajouter une mesure dans le tableau.
 - Ajout de la saisie dans le tableau.
 
 
-#### Liberer
+### Libérer
 ```C
 // Libération de la mémoire si allouée, ne rien faire si non allouée
 // Doit pouvoir être appelée plusieurs fois de suite sans problème
 void liberer(Mesures* mesures);
 ```
 
-#### Afficher
+### Afficher
 ```C
 // Pas d'erreur même si aucune mesure allouée
 void afficher(Mesures* mesures);
@@ -76,7 +74,7 @@ Les mesures
 ...
 ```
 
-#### Moyenne
+### Moyenne
 ```C
 double moyenne(Mesures* mesures);
 ```
@@ -84,7 +82,7 @@ Cette fonction affiche le nombre de mesure ainsi que la moyenne des valeurs qui 
 
 
 ## Menu
-Ecrire un programme principal avec un `menu` permettant de
+Écrire un programme principal avec un `menu` permettant de
 - saisir
 - libérer
 - ajouter
