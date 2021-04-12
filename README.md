@@ -95,6 +95,11 @@ Cette fonction affiche le nombre de mesure ainsi que la moyenne des valeurs qui 
 - La saisie des mesures est en `double`
 - Si une mauvaise saisie est faite, il faut demander à l'utilisateur de recommencer.
 
+## Fonctions
+- Découper le programme en petites fonctions
+- Développer une fonction pour faire la saisie d'un nombre
+- Vous ne devez pas copier du code
+
 ## IMPORTANT
 - On ne peut allouer qu'un seul bloc.
 - Si l'allocation se passe mal, on doit informer l'utilisateur et non quitter le programme.
