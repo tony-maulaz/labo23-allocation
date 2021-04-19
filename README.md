@@ -143,8 +143,8 @@ typedef struct
 
 Cette fonction affiche la liste des mesures.
 
-Sur chaque ligne il faut afficher le `numéro` de la mesure ainsi que la valeur.
-
+Sur chaque ligne il faut afficher le `numéro` de la mesure ainsi que la valeur. Le numéro doit venir de la structure.
+ 
 ```console
 Les mesures
 1 : 2.365
