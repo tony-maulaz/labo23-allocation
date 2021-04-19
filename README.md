@@ -108,3 +108,90 @@ Cette fonction affiche le nombre de mesure ainsi que la moyenne des valeurs qui 
   Par exemple, la fonction `afficher` ne doit pas planter, même si l’utilisateur n’a pas encore procédé à la saisie.
 - Faites en sorte que quelle que soit la séquence d’opérations effectuée par l’utilisateur, on ne perde jamais un bloc de mémoire alloué dynamiquement. 
 - La mémoire dynamique allouée doit également être libérée avant de quitter le programme.
+
+## Partie 2
+
+### Git
+Avant toute grosse modification n'oubliez pas de faire un `commit` afin de pouvoir revenir en arrière facilement.
+
+### Structure Mesure
+
+Modifier la structure `Mesures` pour avoir un tableau de structure `Point` à la place d'un tableau de `double`.
+
+```C
+typedef struct
+{
+  int num;
+  double valeur;
+} Point;
+```
+
+Le champ `valeur` correspond à l'ancienne variable `double` qui contient la valeur de mesure.
+
+Le champ `num` est le numéro de la mesure. A chaque fois qu'une nouvelle mesure est faite, on incrémente cette valeur. La première mesure a comme numéro le `1`.
+
+```C
+typedef struct
+{
+  int taille;
+  int nbrMesure;
+  Point* tableau;
+} Mesures;
+```
+
+### Modification de la fonction afficher
+
+Cette fonction affiche la liste des mesures.
+
+Sur chaque ligne il faut afficher le `numéro` de la mesure ainsi que la valeur.
+
+```console
+Les mesures
+1 : 2.365
+2 : 25.7
+3 : 78.369
+...
+```
+
+
+### Ajouter les fonctionnalités suivantes :
+
+#### Modifier
+```C
+// Modifie la taille du tableau
+void modifier(Mesures* mesures);
+```
+Cette fonction permet de demander à l'utilisateur de saisir une nouvelle capacité pour le tableau.
+
+- Si la nouvelle capacité du tableau est plus petite que le nombre de mesure en cours, il faut afficher une erreur et ne pas modifier la taille.
+
+La fonction affiche un message informatif du genre :
+```console
+La capacité a bien été modifiée, il y a maintenant 12 places dans le tableau.
+```
+
+#### Supprimer dernière
+Supprime la dernière mesure dans le tableau, ce qui va permette d'avoir une place en plus pour stocker une mesure.
+
+```C
+// Supprime la dernière mesure du tableau
+void supprimer_fin(Mesures* mesures);
+```
+
+La fonction affiche un message informatif du genre :
+```console
+La mesure #8 a été supprimée, il reste 5 places dans le tableau.
+```
+
+#### Supprimer première
+Supprime la première mesure dans le tableau, ce qui va permette d'avoir une place en plus pour stocker une mesure.
+
+```C
+// Supprime la première mesure dans le tableau
+void supprimer_debut(Mesures* mesures);
+```
+
+La fonction affiche un message informatif du genre :
+```console
+La première mesure a été supprimée, il reste 9 places dans le tableau.
+```
