@@ -26,20 +26,20 @@ Ce type de données permet de mémoriser des valeurs mesurées dans un tableau a
 
 On vous demande d’écrire les fonctions suivantes :
 
-### Saisir
+### Initialiser
 ```C
 // Saisie de la taille du tableau et allocation de mémoire.
-void saisir(Mesures* mesures);
+void init(Mesures* mesures);
 ```
 Cette fonction doit
 - Demander à l'utilisateur de saisir la taille du tableau de mesure
 - Allouer le tableau
 - Si un tableau est déjà alloué, il faut informer l'utilisateur que cela n'est pas possible.
 
-### Initialiser
+### Reset
 ```C
-// Mise à zéro des champs de la structure y compris le tableau de mesures
-void initialiser(Mesures* mesures);
+// Mise à zéro des des valeurs dans le tableau de mesures
+void reset(Mesures* mesures);
 ```
 
 ### Ajouter
@@ -97,7 +97,7 @@ Cette fonction affiche le nombre de mesure ainsi que la moyenne des valeurs qui 
 
 ## Fonctions
 - Découper le programme en petites fonctions
-- Développer une fonction pour faire la saisie d'un nombre
+- Développer une fonction pour faire la saisie d'un nombre. Cette fonction doit prendre comme paramètre le message à afficher.
 - Vous ne devez pas copier du code
 
 ## IMPORTANT
